@@ -1,0 +1,26 @@
+What is FreeSWITCH?
+A: FreeSWITCH is a free and open-source communication platform designed to facilitate the creation of voice, video, and messaging applications.
+
+Q: What programming languages are used in FreeSWITCH development?
+A: FreeSWITCH is primarily written in C, but it also supports other programming languages such as Lua and JavaScript.
+
+Q: Can you describe the FreeSWITCH module development process?
+A: The module development process involves writing C code to implement the desired functionality, compiling the code into a shared object (.so) file, and then loading the module into FreeSWITCH. The module can then be configured and used within the FreeSWITCH system.
+
+Q: How does FreeSWITCH handle media processing?
+A: FreeSWITCH uses the concept of a "media pipeline" to handle media processing. Media flows through a series of processing steps, called "profiles," which can apply transformations such as transcoding, filtering, or mixing.
+
+Q: How does FreeSWITCH handle call control?
+A: FreeSWITCH uses an event-driven architecture to handle call control. Call events are handled by a set of "event handlers" that can be implemented as modules. Event handlers can perform actions such as answering a call, playing audio, or transferring the call to another endpoint.
+
+Q: Can you explain how FreeSWITCH handles signaling protocols?
+A: FreeSWITCH uses a modular architecture to support various signaling protocols, such as SIP, WebRTC, and XMPP. Each protocol is implemented as a module that handles the protocol-specific details of signaling and call setup.
+
+Q: Have you developed any FreeSWITCH modules? Can you describe one of them?
+A: This question will depend on the candidate's experience. If the candidate has developed FreeSWITCH modules, they should be able to describe the module and its functionality in detail. If they have not, they can describe a hypothetical module they would like to develop.
+
+Q: Can you explain the FreeSWITCH dialplan?
+A: The FreeSWITCH dialplan is a script-based system that defines how calls should be routed and processed. The dialplan consists of a series of "contexts," each of which contains a set of "extensions" that define how calls should be handled. Extensions can perform actions such as playing audio, answering calls, and transferring calls.
+
+Q: How does FreeSWITCH handle security?
+A: FreeSWITCH supports various security features, such as transport-layer security (TLS) for signaling and media encryption for secure communication. FreeSWITCH can also be configured to authenticate users and restrict access to certain resources.

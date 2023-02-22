@@ -1,0 +1,27 @@
+What is SIP and RTP explain in detail along with the headers
+
+SIP (Session Initiation Protocol) and RTP (Real-time Transport Protocol) are two protocols commonly used in voice over IP (VoIP) communication. SIP is responsible for signaling, call setup, and tear down, while RTP is responsible for transporting the media, such as voice or video, between endpoints.
+
+SIP Header:
+SIP headers are used to convey information such as the sender and receiver of the message, the type of request or response being sent, and any additional information needed for the message to be processed correctly.
+
+Here are some commonly used SIP headers:
+
+From: Indicates the sender of the SIP message.
+To: Indicates the intended recipient of the SIP message.
+Call-ID: A unique identifier for the SIP call.
+CSeq: A sequence number used to order SIP messages within a call.
+Via: Contains information about the route the message has taken to reach its destination.
+RTP Header:
+The RTP header contains information about the media being transported, including the type of media, timestamps, and sequence numbers.
+
+Here are some commonly used RTP header fields:
+
+Version: The version of the RTP protocol being used.
+Payload type: Indicates the type of media being transported, such as audio or video.
+Timestamp: Indicates the time at which the media packet was captured.
+Sequence number: A sequence number used to order the RTP packets.
+SSRC: A synchronization source identifier that uniquely identifies the source of the RTP stream.
+In addition to the standard RTP header fields, RTP can also include additional information such as header extensions, which can be used to convey additional information about the media being transported.
+
+Overall, SIP and RTP work together to enable real-time communication over IP networks. SIP handles the signaling and call setup, while RTP handles the transportation of the media. By working together, these protocols enable real-time communication over IP networks in a way that is reliable and efficient.

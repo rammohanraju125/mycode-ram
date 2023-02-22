@@ -1,0 +1,72 @@
+types of SIP call flows explain me indetail with diagram
+There are several types of SIP call flows, each of which describes a specific scenario for establishing a VoIP call using the Session Initiation Protocol (SIP). Here are some of the most common types of SIP call flows, along with an explanation and diagram for each:
+
+Simple SIP Call Flow: The simple SIP call flow is the most basic type of SIP call. It involves only two endpoints, and follows the basic call flow steps outlined in my previous answer. Here is a diagram of a simple SIP call flow:
+lua
+Copy code
+Client A            SIP Server             Client B
+  | INVITE          |                      |
+  |---------------->| 100 Trying           |
+  |                 |---------------------->|
+  |                 | 180 Ringing          |
+  |                 |---------------------->|
+  | 200 OK          |                      |
+  |<----------------|                      |
+  | ACK             |                      |
+  |---------------->|                      |
+  | Media Exchange  |                      |
+  |<================>|<====================>|
+  | BYE             |                      |
+  |---------------->|                      |
+  | 200 OK          |                      |
+  |<----------------|                      |
+Forking SIP Call Flow: The forking SIP call flow is used when the calling party wants to reach multiple destinations at once. The SIP server sends the INVITE request to multiple endpoints, and the first endpoint to respond with a 200 OK message wins the call. Here is a diagram of a forking SIP call flow:
+lua
+Copy code
+Client A            SIP Server             Client B
+  | INVITE          |                      |
+  |---------------->| INVITE               |
+  |                 |---------------------->|
+  | 100 Trying      |                      |
+  |<----------------| 100 Trying           |
+  | 180 Ringing     |                      |
+  |<----------------| 180 Ringing          |
+  | 200 OK          |                      |
+  |<----------------| 200 OK               |
+  | ACK             |                      |
+  |---------------->| ACK                  |
+  | Media Exchange  |                      |
+  |<================>|<====================>|
+  | BYE             |                      |
+  |---------------->| BYE                  |
+  | 200 OK          |                      |
+  |<----------------| 200 OK               |
+Re-Invite SIP Call Flow: The re-INVITE SIP call flow is used when one party wishes to change the parameters of an ongoing call, such as the codec used or the media type. The party sending the re-INVITE request sends a modified INVITE message, and the other party responds with a 200 OK message. Here is a diagram of a re-INVITE SIP call flow:
+lua
+Copy code
+Client A            SIP Server             Client B
+  | INVITE          |                      |
+  |---------------->| 100 Trying           |
+  |                 |---------------------->|
+  |                 | 180 Ringing          |
+  |                 |---------------------->|
+  | 200 OK          |                      |
+  |<----------------|                      |
+  | ACK             |                      |
+  |---------------->|                      |
+  | Media Exchange  |                      |
+  |<================>|<====================>|
+  | Re-Invite       |                      |
+  |---------------->| 100 Trying           |
+  |                 |---------------------->|
+  |                 | 200 OK               |
+  |                 |---------------------->|
+  | 200 OK          |                      |
+  |<----------------|                      |
+  | Media Exchange  |                      |
+  |<================>|<====================>|
+  | BYE             |                      |
+  |---------------->|                      |
+  | 200 OK          |                      |
+  |<----------------|                      |
+SIP Call

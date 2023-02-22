@@ -1,0 +1,14 @@
+explain me SIP call flows
+A SIP call flow refers to the sequence of events that occur during a VoIP call using the Session Initiation Protocol (SIP) for call signaling. Here is a basic SIP call flow:
+
+Registration: The SIP client (such as a softphone or IP phone) sends a registration request to a SIP server, indicating that it is available to receive calls. The SIP server updates its database with the client's current location.
+
+Call Setup: When the SIP client wants to make a call, it sends an INVITE request to the SIP server, indicating the number or URI of the party it wishes to call. The SIP server responds with a 100 Trying message to acknowledge receipt of the request, and then sends a 180 Ringing message to indicate that the called party is ringing.
+
+Call Acceptance: When the called party answers the call, their SIP client sends a 200 OK response to the INVITE request. This message includes information such as the IP address and port number of the client, as well as the codec to be used for the call.
+
+Media Exchange: Once the call has been established, the SIP clients begin exchanging media packets using the Real-time Transport Protocol (RTP). The RTP packets contain the actual audio or video data being sent between the parties.
+
+Call Termination: When the call is completed, either party can send a BYE request to signal that the call should be terminated. The other party responds with a 200 OK message to acknowledge the request. The SIP server updates its database with the current location of the client.
+
+Note that this is a simplified call flow, and in reality, there may be additional SIP messages exchanged between the clients and servers, depending on the specific call setup and call termination procedures being used. Additionally, there may be additional elements involved in the call flow, such as SIP proxies or gateways, which can modify or route the SIP messages.
